@@ -55,6 +55,10 @@ ul.menu {
     padding: 0;
     overflow: hidden;
     background-color: #204361;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
 }
 
 ul.menu > li {
@@ -73,4 +77,38 @@ ul.menu > li > a {
 ul.menu > li > a:hover {
     background-color: #A7C1D9;
     font-weight: bold;
+}
+
+.flexContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-around;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.flex-item {
+    background: black;
+    padding: 5px;
+    width: 200px;
+    height: 200px;
+    margin-top: 10px;
+}
+
+#app {
+    width: 200px;
+    height: 200px;
+}
+
+@media (max-width: 800px) {
+    .menu {
+        justify-content: space-around;
+    }
+}
+
+@media (max-width: 480px) {
+    .menu {
+        flex-direction: column;
+    }
 }
